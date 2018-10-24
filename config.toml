@@ -1,0 +1,23 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Lorem Ipsum"
+theme = "hugo-coder"
+
+[params]
+    author = "Lorem Ipsum"
+    info = "Lorem Ipsum Dolor"
+    description = "Lorem Ipsum"
+    keywords = "personal,developer"
+    hideCredits = true
+    hideCopyright = true
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/josephting"
+
+[[menu.main]]
+    name = "Portfolio"
+    weight = 1
+    url = "/works/"
