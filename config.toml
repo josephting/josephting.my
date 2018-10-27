@@ -2,6 +2,7 @@ baseURL = "https://josephting.my"
 languageCode = "en-us"
 title = "Joseph Ting"
 theme = "hugo-coder"
+googleAnalytics = "UA-5454059-25"
 
 [params]
     author = "Joseph Ting"
@@ -47,3 +48,9 @@ theme = "hugo-coder"
     name = "About"
     weight = 3
     url = "/about/"
+
+[privacy]
+    [privacy.googleAnalytics]
+        anonymizeIP = true
+        respectDoNotTrack = true
+        useSessionStorage = true
