@@ -1,0 +1,24 @@
+<section class="container centered">
+  <div class="about">
+    {{ with .Site.Params.avatarurl }}
+      <div class="avatar"><img src="{{ . }}" alt="avatar"></div>
+    {{ end }}
+    <h1>{{ .Site.Params.author }}</h1>
+    <h2>{{ .Site.Params.info }}</h2>
+    {{ with .Site.Params.social }}
+    <ul>
+      {{ range sort .}}
+        {{ if .icon }}
+          <li><a href="{{ .url }}"><i class="{{ .icon }}"></i></a></li>
+        {{ else }}
+          <li><a href="{{ .url }}">{{ .name }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+    {{ end }}
+    <p>Amiable, Unassuming, Sincere, Diligent</p>
+    <p>Gamer, Food, Anime, Piano</p>
+    <p>JavaScript, PHP, Python</p>
+    <p>Tokyo, Kuala Lumpur</p>
+  </div>
+</section>
