@@ -1,0 +1,16 @@
+{{ with .Resources.ByType "image" }}
+  {{ range . }}
+    {{ $thumbnail := .Resize "860x" }}
+    <div class="portfolio-screenshot">
+        <span></span>
+        <a href="{{ .RelPermalink }}" target="portfolio">
+          <figure style="display: inline-block; margin: 1em 0;">
+            <img src="{{ $thumbnail.RelPermalink }}" alt="{{ $thumbnail.Name }}" />
+            <figcaption>
+              <span style="text-align: left; width: auto; font-size: 1.6rem; font-weight: normal;">{{ $thumbnail.Name}}</span>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+  {{ end }}
+{{ end }}

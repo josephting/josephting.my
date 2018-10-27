@@ -10,9 +10,12 @@ theme = "hugo-coder"
     keywords = "personal,developer"
     hideCredits = true
     hideCopyright = true
+    custom_css = ["style.css"]
+    commit = "https://github.com/josephting/josephting.my/tree/"
 
 [permalinks]
     blog = "/:year/:month/:title/"
+    portfolio = "/portfolio/projects/:title/"
 
 [[params.social]]
     name = "Github"
