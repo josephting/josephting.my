@@ -1,3 +1,4 @@
 /category/* /categories/:splat
 /tag/* /tags/:splat
 /feed/ /index.xml
+/*/feed /:splat/index.xml
