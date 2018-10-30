@@ -13,3 +13,7 @@ With that in mind, I've been working on revamping my personal WordPress powered 
 One of the main benefit I'm taking advantage of here is I no longer have to pay for web hosting cost since [Netlify](https://www.netlify.com/) is hosting this site free of charge.
 
 I'm so excited of what is there to come in the future years as more and more of the tedious tasks are being handled by the computers while we're focusing on the creative part where automation is more challenging.
+
+By the way, here's a sneak peek of how much improvement in response time there is after making the switch.
+
+![Static Migration Performance Improvement](/2018/10/website-engine-revamp/static-migration-performance-improvement.jpg)
