@@ -20,6 +20,8 @@ pygmentsCodeFences = true
 [permalinks]
     blog = "/:year/:month/:title/"
     portfolio = "/portfolio/projects/:title/"
+    archive-year = "/:year/"
+    archive-month = "/:year/:month/"
 
 [[params.social]]
     name = "Github"

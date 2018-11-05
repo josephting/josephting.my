@@ -1,0 +1,17 @@
+{{ define "title" }}
+  Archive for {{ .Date.Format "2006" }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container list">
+    <h1 class="title">Archive for {{ .Date.Format "2006" }}</h1>
+
+    <ul>
+      {{ $archiveYear := .Date.Format "2006" }}
+      {{ range where .Site.Pages "Section" "blog" }}
+        {{ if and (eq (.Date.Format "2006") $archiveYear) (ne (.URL) "/blog/") }}
+          {{ partial "archive" . }}
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
