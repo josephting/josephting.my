@@ -8,3 +8,15 @@
     to = "https://josephting.my/:splat"
     status = 301
     force = true
+
+[[redirects]]
+    from = "/archive-year/"
+    to = "/404.html"
+    status = 404
+    force = true
+
+[[redirects]]
+    from = "/archive-month/"
+    to = "/404.html"
+    status = 404
+    force = true
