@@ -2,3 +2,9 @@
     for = "/css/coder*.css"
     [headers.values]
         Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+    from = "https://josephting.netlify.com/*"
+    to = "https://josephting.my/:splat"
+    status = 301
+    force = true
