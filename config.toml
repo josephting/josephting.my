@@ -25,18 +25,23 @@ pygmentsCodeFences = true
 
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fab fa-github"
     weight = 1
     url = "https://github.com/josephting"
 [[params.social]]
+    name = "Stack Overflow"
+    icon = "fab fa-stack-overflow"
+    weight = 2
+    url = "https://stackoverflow.com/users/685326/josephting"
+[[params.social]]
     name = "Twitter"
     icon = "fab fa-twitter"
-    weight = 2
+    weight = 3
     url = "https://twitter.com/josephting/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
-    weight = 3
+    weight = 4
     url = "https://www.linkedin.com/in/josephting/"
 
 [[menu.main]]
