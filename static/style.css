@@ -1,3 +1,7 @@
+body {
+    display: block;
+}
+
 h1.home-author {
     font-size: 7.2rem;
     line-height: 9.6rem;
