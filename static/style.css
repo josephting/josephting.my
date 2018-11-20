@@ -1,5 +1,9 @@
-body {
-    display: block;
+body.home .wrapper {
+    justify-content: space-between;
+}
+
+body.home .content {
+    flex: none;
 }
 
 h1.home-author {
