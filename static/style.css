@@ -6,3 +6,10 @@ h1.home-author {
 code {
     padding: 0;
 }
+
+.pagination li a {
+    font-size: 1.8rem;
+    color: #212121;
+    font-family: Lato, Helvetica, sans-serif;
+    font-weight: 700;
+}
