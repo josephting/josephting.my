@@ -1,11 +1,3 @@
-body.home .wrapper {
-    justify-content: space-between;
-}
-
-body.home .content {
-    flex: none;
-}
-
 h1.home-author {
     font-size: 7.2rem;
     line-height: 9.6rem;
