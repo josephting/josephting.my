@@ -1,13 +1,13 @@
 <li>
-  <span>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-  <a href="{{ .URL }}">{{ .Title }}</a>
+  <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+  <a class="title" href="{{ .URL }}">{{ .Title }}</a>
   {{ $singleURL := .URL }}
   {{ with .Resources.ByType "image" }}
     {{ range . }}
       {{ $thumbnail := .Fill "350x200 Top" }}
       <div class="portfolio-screenshot">
-        <span></span>
-        <a href="{{ $singleURL }}">
+        <span class="date"></span>
+        <a class="title" href="{{ $singleURL }}">
           <figure style="display: inline-block; margin: 1em 0;">
             <img src="{{ $thumbnail.RelPermalink }}" alt="{{ $thumbnail.Name }}" />
             <figcaption>
