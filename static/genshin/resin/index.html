@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact Resin Regeneration Calculator</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="mt-10">
+    <div class="lg:container lg:mx-auto">
+        <h1 class="font-sans font-bold text-4xl tracking-tighter subpixel-antialiased mb-8">Genshin Impact Resin Regeneration Calculator</h1>
+        <form>
+            <div class="flex space-x-8">
+                <div class="flex-1">
+                    <div class="mb-4">
+                        <div class="mb-2">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="cresin">Current Resin</label>
+                            <input class="w-full py-2 px-3 text-gray-700 focus:outline-none" id="cresin" name="cresin" type="range" min="0" max="160">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="block">
+            <h3 class="font-sans font-bold text-2xl tracking-tighter subpixel-antialiased">Resin Full</h3>
+            <div class="flex space-x-8">
+                <div class="flex-1">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script>
+        const maxResin = 160;
+        const regenRate = 8 * 60 * 1000;
+        const cresinInput = document.querySelector('#cresin');
+        const cresinDisplay = document.querySelector('#cresin + span');
+        const result = document.querySelector('#result');
+        const calculate = (cresin) => {
+            let regenTime = (maxResin - cresin) * regenRate;
+            let now = new Date();
+            return new Date(now.getTime() + regenTime);
+        };
+        const showResult = () => {
+            let fullTime = calculate(cresinInput.value);
+            result.innerHTML = `${moment(fullTime).fromNow()}<br>${moment(fullTime).format('LL LTS')}`;
+        };
+        cresinInput.addEventListener('input', () => {
+            cresinDisplay.innerHTML = cresinInput.value;
+            showResult();
+        }, false);
+        window.addEventListener('load', () => {
+            cresinDisplay.innerHTML = cresinInput.value;
+            showResult();
+        });
+    </script>
+</body>
+</html>
