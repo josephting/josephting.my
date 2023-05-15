@@ -2,7 +2,7 @@ baseURL = "https://josephting.my"
 languageCode = "en-us"
 title = "Joseph Ting"
 theme = "hugo-coder"
-googleAnalytics = "UA-5454059-25"
+googleAnalytics = "G-R5WW6VSNKF"
 pygmentsCodeFences = true
 
 [params]
